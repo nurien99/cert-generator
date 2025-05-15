@@ -1,0 +1,37 @@
+{
+  "name": "cert-generator",
+  "version": "1.0.0",
+  "description": "Web-based certificate generator with single and bulk functionality using Node.js, Express, and pdf-lib",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pdf",
+    "certificate",
+    "generator",
+    "express",
+    "nodejs",
+    "pdf-lib",
+    "bulk",
+    "csv",
+    "zip",
+    "multer",
+    "fontkit"
+  ],
+  "author": "Nurin Athirah",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "pdf-lib": "^1.17.1",
+    "multer": "^1.4.5-lts.1",
+    "csv-parser": "^3.0.0",
+    "archiver": "^7.0.1",
+    "fontkit" : "2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

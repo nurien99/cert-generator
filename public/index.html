@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MDC IT Certificate Generator</h1>
+
+        <h2>Single Certificate</h2>
+        <form action="/generate-certificate" method="POST" class="form-section">
+            <div class="form-group">
+                <label for="userNameSingle">Recipient's Name:</label>
+                <input type="text" id="userNameSingle" name="userName" placeholder="Enter full name" required>
+            </div>
+            <div class="form-group">
+                <label for="trainingTypeSingle">Training/Course Name:</label>
+                <input type="text" id="trainingTypeSingle" name="trainingType" placeholder="e.g., Advanced JavaScript" required>
+            </div>
+            <div class="form-group">
+                <label for="dateSingle">Date of Completion:</label>
+                <input type="date" id="dateSingle" name="date" required>
+            </div>
+            <button type="submit">Generate Single Certificate</button>
+        </form>
+
+        <hr class="divider">
+
+        <h2>Bulk Generate Certificates</h2>
+        <form action="/bulk-generate-certificates" method="POST" enctype="multipart/form-data" class="form-section">
+            <div class="form-group">
+                <label for="bulkDataFile">Upload CSV File:</label>
+                <input type="file" id="bulkDataFile" name="bulkDataFile" accept=".csv" required>
+                <small>CSV file header must be: <code>userName,trainingType,date</code> (date as YYYY-MM-DD)</small>
+            </div>
+            <button type="submit">Generate Bulk Certificates (ZIP)</button>
+        </form>
+    </div>
+</body>
+</html>

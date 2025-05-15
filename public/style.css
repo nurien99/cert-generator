@@ -1,0 +1,158 @@
+/* General body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef2f7; /* Light grayish blue background */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top to see content when page is long */
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Main container for the forms */
+.container {
+    background-color: #ffffff; /* White background for the form container */
+    padding: 30px 40px;
+    border-radius: 10px; /* More rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    width: 100%;
+    max-width: 550px; /* Slightly wider */
+    margin-top: 30px; /* Margin from the top */
+    margin-bottom: 30px; /* Margin at the bottom */
+}
+
+/* Main title */
+h1 {
+    text-align: center;
+    color: #2c3e50; /* Dark blue-gray */
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Subtitles for single/bulk sections */
+h2 {
+    text-align: center;
+    color: #34495e; /* Slightly lighter blue-gray */
+    margin-top: 35px;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    border-bottom: 1px solid #ecf0f1; /* Light separator line */
+    padding-bottom: 10px;
+}
+
+/* Styling for form sections */
+.form-section {
+    margin-bottom: 25px;
+}
+
+/* Styling for individual form groups (label + input) */
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #34495e; /* Consistent label color */
+    font-weight: 500; /* Medium weight */
+    font-size: 0.95em;
+}
+
+/* Styling for text, date, and file inputs */
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 12px 15px; /* More padding */
+    border: 1px solid #bdc3c7; /* Light gray border */
+    border-radius: 6px; /* More rounded */
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #2c3e50;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="file"] {
+    padding: 10px 15px; /* Adjusted padding for file input */
+    background-color: #f8f9fa; /* Light background for file input */
+}
+
+/* Focus styles for inputs */
+.form-group input[type="text"]:focus,
+.form-group input[type="date"]:focus,
+.form-group input[type="file"]:focus {
+    outline: none;
+    border-color: #3498db; /* Blue border on focus */
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2); /* Soft blue glow */
+}
+
+/* Helper text for CSV format */
+.form-group small {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.8em;
+    color: #7f8c8d; /* Grayish color for helper text */
+}
+.form-group small code {
+    background-color: #ecf0f1;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+
+/* Submit button styling */
+button[type="submit"] {
+    background-color: #e26939; /* Primary blue */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #c28618; /* Darker blue on hover */
+}
+button[type="submit"]:active {
+    transform: translateY(1px); /* Slight press effect */
+}
+
+/* Divider line between form sections */
+.divider {
+    border: 0;
+    height: 1px;
+    background: #dfe6e9; /* Lighter divider */
+    margin: 40px 0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 20px 25px;
+    }
+    h1 {
+        font-size: 1.6em; /* Slightly larger h1 on mobile */
+        margin-bottom: 25px;
+    }
+    h2 {
+        font-size: 1.2em;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="date"],
+    .form-group input[type="file"],
+    button[type="submit"] {
+        font-size: 15px; /* Slightly smaller font in inputs on mobile */
+    }
+}
